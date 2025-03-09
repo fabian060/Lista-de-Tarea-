@@ -1,0 +1,125 @@
+:root{
+    color-scheme: light dark;
+    --bg-color: light-dark(#f1f1f159, #252525);
+    --box-shadow: light-dark(#00000056, #616161);
+    --input-text: light-dark(#6161614d, #5251519d);
+    --text-color: light-dark(#ffffff, #000000);
+    --item-button-color: light-dark(#08fd005e, #08fd00a1);
+    --task-item-delete-button-color: light-dark(#fd0000a1, #fd0000a1);
+    --task-item-check-button-color: light-dark(#0400ff5e, #0400ffa1);
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    max-width: 600px;
+    max-height: 690px;
+    margin: auto;
+    background: var(--bg-color);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px var(--box-shadow);
+}
+
+#task-list{
+    list-style-type: none;
+}
+
+#input-text {
+    background-color: var(--input-text);
+    border-radius: 5px;
+    width: 500px;
+    height: 25px;
+    color: var(--text-color);
+    padding: 3px;
+    border-radius: 25px 0 0 25px;
+    color: #000000;
+}
+
+#item-button {
+    background-color: var(--item-button-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px var(--box-shadow);
+    width: 70px;
+    height: 34px;
+    padding: 3px;
+    border-radius: 0 25px 25px 0;
+}
+
+#comment {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    color: red;
+}
+
+.task-item-text-decoration{
+    text-decoration: line-through;
+}
+
+.task-item-delete-button {
+    background-color: var(--task-item-delete-button-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px var(--box-shadow);
+    width: 70px;
+    height: 34px;
+    padding: 3px;
+    border-radius: 25px 25px 25px 25px;
+    margin: 5px;
+}
+
+.task-item-check-button {
+    background-color: var(--task-item-check-button-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px var(--box-shadow);
+    width: 70px;
+    height: 34px;
+    padding: 3px;
+    border-radius: 25px 25px 25px 25px;
+    margin: 5px;
+}
+
+    
+#task-container {
+    max-height: 529px;
+    overflow-y: scroll;
+} 
+    
+::-webkit-scrollbar {
+    display:none;
+}
+
+@media (min-width: 320px) {
+    #input-text {
+      width: 64%;
+    }
+    #task-container {
+        max-height: 420px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #input-text {
+        width: 85%;
+    }
+    #task-container {
+        max-height: 500px;
+    }
+    #container {
+        max-height: 1000px;
+    } 
+}
+
+@media (min-width: 1440px) {
+    #task-container {
+        max-height: 500px;
+    }
+}
