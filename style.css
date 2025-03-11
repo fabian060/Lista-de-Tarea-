@@ -133,6 +133,7 @@ h1 {
 
 #task {
     text-align: center;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 @media (min-width: 320px) {
