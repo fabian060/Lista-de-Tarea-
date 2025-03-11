@@ -129,6 +129,7 @@ h1 {
 .task-container-completed {
     display: flex;
     justify-content: space-between;  
+    padding: 10px;
 }
 
 #task, #task-completed,#task-remaining {
