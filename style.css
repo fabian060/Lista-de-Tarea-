@@ -173,6 +173,9 @@ h1 {
         padding: 0; 
         word-wrap: break-word;
     }
+    #task, #task-completed, #task-remaining{
+    padding: 0px;
+}
   }
   
   @media (min-width: 1024px) {
