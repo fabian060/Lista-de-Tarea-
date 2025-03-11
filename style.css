@@ -131,9 +131,32 @@ h1 {
     justify-content: space-between;  
 }
 
-#task {
+#task, #task-completed,#task-remaining {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
+    
+    border-radius: 20px;
+}
+
+#task-completed {
+    border: 1px solid white;
+    color: white;
+    background-color: #08fd00a1;
+    padding: 2px;
+}
+
+#task-remaining {
+    border: 1px solid white;
+    color: white;
+    background-color: #fd0000a1;
+    padding: 2px;
+}
+
+#task {
+    border: 1px solid white;
+    color: white;
+    background-color: #0400ffa1;
+    padding: 2px;
 }
 
 @media (min-width: 320px) {
