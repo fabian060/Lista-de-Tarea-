@@ -135,29 +135,22 @@ h1 {
 #task, #task-completed,#task-remaining {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
-    
+    color: var(--text-color);
     border-radius: 20px;
+    border: 1px solid var(--text-color);
+    padding: 2px;
 }
 
 #task-completed {
-    border: 1px solid white;
-    color: white;
-    background-color: #08fd00a1;
-    padding: 2px;
+    background-color: #08fd00a1;  
 }
 
 #task-remaining {
-    border: 1px solid white;
-    color: white;
     background-color: #fd0000a1;
-    padding: 2px;
 }
 
 #task {
-    border: 1px solid white;
-    color: white;
     background-color: #0400ffa1;
-    padding: 2px;
 }
 
 @media (min-width: 320px) {
