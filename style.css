@@ -4,9 +4,9 @@
     --box-shadow: light-dark(#00000056, #616161);
     --input-text: light-dark(#6161614d, #5251519d);
     --text-color: light-dark(#000000, #ffffff);
-    --item-button-color: light-dark(#08fd00a1, #08fd00a1);
+    --item-button-color: light-dark(#0400ffa1, #0400ffa1);
     --task-item-delete-button-color: light-dark(#fd0000a1, #fd0000a1);
-    --task-item-check-button-color: light-dark(#0400ffa1, #0400ffa1);
+    --task-item-check-button-color: light-dark(#08fd00a1, #08fd00a1);
     
 }
 
