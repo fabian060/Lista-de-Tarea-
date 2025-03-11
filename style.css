@@ -160,6 +160,9 @@ h1 {
     #container {
         max-height: 600px;
     } 
+    #row {
+        max-height: 300px
+    }
     .task-item-check-button, .task-item-delete-button, #task-item-check-button-decoration {
         height: 90px;
         width: 15%;
