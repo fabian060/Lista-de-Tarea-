@@ -3,55 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <title>Lista de tarea</title>
 </head>
-<body>  
+<body>
+    <div id="container">
+        <h1>Lista de Tareas</h1>
+    <input type="text" id="input-text" name="input-text" placeholder="Agregar nueva tarea">
+    <button id="item-button" type="submit">Agregar</button> 
+    <p id="comment">No debe estar vacio</p>
 
-<div id="container">
-    <h1>Lista de Tareas</h1>
-<input type="text" id="input-text" name="input-text" placeholder="Agregar nueva tarea">
-<button id="item-button" type="submit">Agregar</button> 
-<p id="comment">No debe estar vacio</p>
-
-
- <div id="task-container">
-  <ul id="task-list">
-   <li class="task-item">
-    <p class="task-item-text-decoration">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-    <button class="task-item-check-button">Chekear</buttons>
-    <button class="task-item-delete-button" >Eliminar</button>
-    </li>
-    <li class="task-item">
-        <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-        <button class="task-item-check-button">Chekear</buttons>
-        <button class="task-item-delete-button">Eliminar</button>
-        </li>
-        <li class="task-item">
-            <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-            <button class="task-item-check-button">Chekear</buttons>
-            <button class="task-item-delete-button">Eliminar</button>
-            </li>
-            <li class="task-item">
-                <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-                <button class="task-item-check-button">Chekear</buttons>
-                <button class="task-item-delete-button">Eliminar</button>
-                </li>
-                <li class="task-item">
-                    <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-                    <button class="task-item-check-button">Chekear</buttons>
-                    <button class="task-item-delete-button">Eliminar</button>
-                    </li>
-                    <li class="task-item">
-                        <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
-                        <button class="task-item-check-button">Chekear</buttons>
-                        <button class="task-item-delete-button">Eliminar</button>
-                        </li>
-     </ul>
-   </div>
+    <div id="row">
+    <div id="task-container">
+          <button id="task-item-check-button-decoration">Chekear</button>
+            <p class="task-item-text-decoration">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
+          <button class="task-item-delete-button" >Eliminar</button>
     </div>
+    <div id="task-container">
+            <button class="task-item-check-button">Chekear</button>
+            <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
+          <button class="task-item-delete-button" >Eliminar</button>
+    </div>
+    <div id="task-container">
+          <button class="task-item-check-button">Chekear</button>
+            <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
+          <button class="task-item-delete-button" >Eliminar</button>
+    </div>
+    <div id="task-container">
+        <button class="task-item-check-button">Chekear</button>
+          <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
+        <button class="task-item-delete-button" >Eliminar</button>
+  </div>
+  <div id="task-container">
+          <button class="task-item-check-button">Chekear</button>
+            <p class="task-item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, dolores temporibus? Accusantium maiores natus quas quae. Dicta eius repudiandae, iste et ad ab velit iure totam suscipit quis, deserunt non.</p>
+          <button class="task-item-delete-button" >Eliminar</button>
+    </div>
+    </div>
+    </div>
+      
 </body>
 </html>
