@@ -1,3 +1,3 @@
 # Lista-de-Tarea-
 
-Lista de Tarea Prueba (No tiene JS)
+Lista de Tarea responsiva Prueba (No tiene JS)
