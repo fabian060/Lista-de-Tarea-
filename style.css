@@ -6,51 +6,74 @@
     --text-color: light-dark(#000000, #ffffff);
     --item-button-color: light-dark(#0400ffa1, #0400ffa1);
     --task-item-delete-button-color: light-dark(#fd0000a1, #fd0000a1);
-    --task-item-check-button-color: light-dark(#08fd00a1, #08fd00a1);
-    
+    --task-item-check-button-color: light-dark(#08fd00a1, #08fd00a1);  
 }
 
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
     background-color: var(--bg-color);
-}
-
-h1 {
-    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #container {
-    max-width: 600px;
-    max-height: 690px;
-    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+#container-form {
+    margin: 0%;
+    height: 80%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--bg-color);
-    padding: 20px;
-    border-radius: 15px;
+    border-radius: 8%;
     box-shadow: 0 2px 10px var(--box-shadow);
+    padding: 2rem;
+}
+
+#container-input {
+    display: flex;
+    flex-direction: row;
+    width: 90%;  
+}
+
+#form {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 0.5rem;
 }
 
 #input-text {
     background-color: var(--input-text);
-    border-radius: 5px;
-    width: 500px;
-    height: 25px;
     color: var(--text-color);
-    padding: 3px;
-    border-radius: 25px 0 0 25px;
+    border-radius: 1.5rem 0 0 1.5rem;
     color: var(--text-color);
+    flex-grow: 1;
+}
+
+#container-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 20%;
+    flex-grow: 1; 
 }
 
 #item-button {
     background-color: var(--item-button-color);
-    border-radius: 5px;
-    box-shadow: 0 2px 10px var(--box-shadow);
-    width: 70px;
-    height: 34px;
-    padding: 3px;
-    border-radius: 0 25px 25px 0;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow);
+    padding: 0.2rem;
+    border-radius: 0 1.5rem 1.5rem 0;
     transition: all 0.3s ease;
+    flex-grow: 1;
 }
 
 #item-button:hover {
@@ -58,46 +81,60 @@ h1 {
     transform: scale(1.1)
 }
 
-#comment {
+.add {
+    height: 1.5rem;
+}
+
+.comment {
     font-family: "Bebas Neue", sans-serif;
-    font-size: 20px;
+    font-size: 1.3rem;
     color: red;
+
 }
 
-.task-item-text-decoration{
-    text-decoration: line-through;
-}
-
-#task-container {
+#row {
+    height: 80%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    padding: 1rem;
 }
 
-.task-item-check-button {
-    background-color: var(--task-item-check-button-color);
-}
-
-.task-item-delete-button{
-    background-color: var(--task-item-delete-button-color);
+.check-button-decoration, .delete-button-decoration, #check-button, 
+#delete-button {
+    height: 1.5rem;
 }
 
 #task-item-check-button-decoration {
+    height: 90%;
+    transition: all 0.3s ease;
     background-color: gray;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow); 
+    border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+    padding: 0.5rem;
+    flex-grow: 1;    
 }
 
-.task-item-check-button, .task-item-delete-button, #task-item-check-button-decoration {
-    border-radius: 5px;
-    box-shadow: 0 2px 10px var(--box-shadow); 
-    border-radius: 25px 25px 25px 25px;
-    width: 80px;
-    height: 90px;
-    padding: 10px;
-    margin: 5px;
+.task-item-check-button {
+    height: 90%;
+    background-color: var(--task-item-check-button-color);
     transition: all 0.3s ease;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow); 
+    border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+    padding: 0.5rem;
+    flex-grow: 1;  
+}
+
+.task-item-delete-button {
+    height: 90%;
+    background-color: var(--task-item-delete-button-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow); 
+    border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+    padding: 0.5rem;
+    flex-grow: 1;
 }
 
 #task-item-check-button-decoration:hover {
@@ -115,30 +152,41 @@ h1 {
     transform: scale(1.1)
 }
 
-#task-container  .task-item-text-decoration, .task-item-text  {
+#task-item-text-decoration {
+    text-decoration: line-through;
     text-align: justify;
-    width: 300%; 
-    margin: 0 20px; 
-  }
-  
-#row{
-    max-height: 400px;
-    overflow-y: scroll;  
-} 
+    padding: 0.5rem;
+    width: 70%;
+}
+
+.task-item-text {
+    text-align: justify;
+    padding: 0.5rem;
+    width: 70%;
+}
+
+#task-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .task-container-completed {
     display: flex;
-    justify-content: space-between;  
-    padding: 10px;
+    justify-content: center;
+    width: 90%;
+    height: 15%;
+    gap: 0.5rem;
+    padding: 1rem;
 }
 
 #task, #task-completed,#task-remaining {
     text-align: center;
     font-family: "Bebas Neue", sans-serif;
     color: var(--text-color);
-    border-radius: 20px;
-    border: 1px solid var(--text-color);
-    padding: 2px;
+    border-radius: 1rem;
+    border: 0.0625rem solid var(--text-color);
+    flex-grow: 1;
 }
 
 #task-completed {
@@ -153,40 +201,8 @@ h1 {
     background-color: #0400ffa1;
 }
 
-@media (min-width: 320px) {
-    #input-text {
-      width: 60%;
-    }
-    #task-container {
-        max-height: 420px;
-    }
-    .task-item-check-button, .task-item-delete-button, #task-item-check-button-decoration {
-        height: 300px;
-        width: 15%;
-        padding: 0; 
-        word-wrap: break-word;
-    }
-    #task, #task-completed, #task-remaining{
-    padding: 0px;
-}
-  }
-  
-  @media (min-width: 1024px) {
-    #input-text {
-        width: 85%;
-    }
-    #task-container {
-        max-height: 300px;
-    }
-    #container {
-        max-height: 600px;
-    } 
-    #row {
-        max-height: 300px
-    }
-    .task-item-check-button, .task-item-delete-button, #task-item-check-button-decoration {
-        height: 90px;
-        width: 15%;
-        word-wrap: break-word;
+@media (min-width: 2500px) {
+    body {
+        font-size: 3rem;
     }
 }
