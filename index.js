@@ -93,16 +93,13 @@ taskList.addEventListener("click", (e) => {
 
 	//tengo que hacer que marque lista la tarea 
 	if (checkBtn) {
-		// 1. Obtener el id
-		const li = checkBtn.parentElement.parentElement;
-		// 2. Eliminar el contacto del array
-		ContactsModule.removeContact(li.id);
-		// 3. Guardar los contactos en el navegador
-		ContactsModule.saveContactsInBrowser();
-		// 4. Renderizar los contactos
-		ContactsModule.renderContacts(taskList);
-	}
+		const li = checkBtn.parentElement.parentElement; // Obtener el elemento li correspondiente
+		const taskText = li.querySelector('.contacts-list-item-name-input'); // Asegúrate de que el texto de la tarea tenga esta clase
 
+		if (taskText) {
+			taskText.classList.toggle('completed'); // Alternar la clase 'completed'
+		}
+	}
 	
 	if (editBtn) {
 		// 1. Obtener el id
