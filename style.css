@@ -92,7 +92,12 @@ body {
 
 }
 
-#row {
+
+
+
+
+
+#task-list {
     height: 80%;
     width: 100%;
     display: flex;
@@ -100,24 +105,14 @@ body {
     align-items: center;
     overflow: auto;
     padding: 1rem;
+    list-style-type: none;
 }
 
-.check-button-decoration, .delete-button-decoration, #check-button, 
-#delete-button {
+#item-edit-btn , #item-delete-btn {
     height: 1.5rem;
 }
 
-#task-item-check-button-decoration {
-    height: 90%;
-    transition: all 0.3s ease;
-    background-color: gray;
-    box-shadow: 0 0.1rem 0.6rem var(--box-shadow); 
-    border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
-    padding: 0.5rem;
-    flex-grow: 1;    
-}
-
-.task-item-check-button {
+.edit-btn {
     height: 90%;
     background-color: var(--task-item-check-button-color);
     transition: all 0.3s ease;
@@ -127,7 +122,7 @@ body {
     flex-grow: 1;  
 }
 
-.task-item-delete-button {
+.delete-btn {
     height: 90%;
     background-color: var(--task-item-delete-button-color);
     transition: all 0.3s ease;
@@ -137,17 +132,12 @@ body {
     flex-grow: 1;
 }
 
-#task-item-check-button-decoration:hover {
-    background-color: gray;
-    transform: scale(1.1)
-}
-
-.task-item-check-button:hover {
+.edit-btn:hover {
     background-color: var(--task-item-check-button-color);
     transform: scale(1.1)
 }
 
-.task-item-delete-button:hover {
+.delete-btn:hover {
     background-color: var(--task-item-delete-button-color);
     transform: scale(1.1)
 }
@@ -165,11 +155,24 @@ body {
     width: 70%;
 }
 
-#task-container {
+#contacts-list-item {
     height: 100%;
     display: flex;
     justify-content: space-between;
 }
+
+
+#inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+
 
 .task-container-completed {
     display: flex;
@@ -200,6 +203,22 @@ body {
 #task {
     background-color: #0400ffa1;
 }
+
+
+
+.input-valid {
+	outline: 1px solid green;
+}
+
+.input-invalid {
+	outline: 1px solid red;
+}
+
+.show-helper-text {
+	display: block;
+}
+
+
 
 @media (min-width: 2500px) {
     body {
