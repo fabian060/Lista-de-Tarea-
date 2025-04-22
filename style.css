@@ -7,6 +7,7 @@
     --item-button-color: light-dark(#0400ffa1, #0400ffa1);
     --task-item-delete-button-color: light-dark(#fd0000a1, #fd0000a1);
     --task-item-check-button-color: light-dark(#08fd00a1, #08fd00a1);  
+    --task-item-edit-button-color: light-dark(#0400ffa1, #0400ffa1);  
 }
 
 body {
@@ -98,14 +99,17 @@ body {
 
 
 #task-list {
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
-    padding: 1rem;
-    list-style-type: none;
+    margin: 0;
+	padding: 0.8rem;
+	list-style: none;
+	overflow: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	border-radius: 1rem 1rem 1rem 1rem;
+	box-shadow: 0 2px 10px var(--box-shadow);
+	height: 100%;
+    width: 85%;
 }
 
 #item-edit-btn , #item-delete-btn {
@@ -113,6 +117,16 @@ body {
 }
 
 .edit-btn {
+    height: 90%;
+    background-color: var(--task-item-edit-button-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow); 
+    border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+    padding: 0.5rem;
+    flex-grow: 1;  
+}
+
+.check-btn {
     height: 90%;
     background-color: var(--task-item-check-button-color);
     transition: all 0.3s ease;
@@ -133,6 +147,11 @@ body {
 }
 
 .edit-btn:hover {
+    background-color: var(--task-item-edit-button-color);
+    transform: scale(1.1)
+}
+
+.check-btn:hover {
     background-color: var(--task-item-check-button-color);
     transform: scale(1.1)
 }
@@ -142,33 +161,39 @@ body {
     transform: scale(1.1)
 }
 
-#task-item-text-decoration {
-    text-decoration: line-through;
-    text-align: justify;
-    padding: 0.5rem;
-    width: 70%;
-}
-
 .task-item-text {
     text-align: justify;
     padding: 0.5rem;
     width: 70%;
 }
 
-#contacts-list-item {
-    height: 100%;
+.container-input-list {
     display: flex;
-    justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	flex-grow: 1;
 }
 
-
-#inputs-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.contacts-list-item-name-input {
+    width: 100%;
+	outline: none;
+	border-radius: 1rem 1rem 1rem 1rem;
+	padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 0.1rem 0.6rem var(--box-shadow);
 }
 
+.contacts-list-item {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
 
+.btns-container {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
 
 
 

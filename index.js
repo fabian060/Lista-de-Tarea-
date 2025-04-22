@@ -78,6 +78,8 @@ form.addEventListener("submit", (e) => {
 taskList.addEventListener("click", (e) => {
 	const deleteBtn = e.target.closest(".delete-btn");
 	const editBtn = e.target.closest(".edit-btn");
+	const checkBtn = e.target.closest(".check-btn")
+
 	if (deleteBtn) {
 		// 1. Obtener el id
 		const li = deleteBtn.parentElement.parentElement;
@@ -89,6 +91,19 @@ taskList.addEventListener("click", (e) => {
 		ContactsModule.renderContacts(taskList);
 	}
 
+	//tengo que hacer que marque lista la tarea 
+	if (checkBtn) {
+		// 1. Obtener el id
+		const li = checkBtn.parentElement.parentElement;
+		// 2. Eliminar el contacto del array
+		ContactsModule.removeContact(li.id);
+		// 3. Guardar los contactos en el navegador
+		ContactsModule.saveContactsInBrowser();
+		// 4. Renderizar los contactos
+		ContactsModule.renderContacts(taskList);
+	}
+
+	
 	if (editBtn) {
 		// 1. Obtener el id
 		const li = editBtn.parentElement.parentElement;
