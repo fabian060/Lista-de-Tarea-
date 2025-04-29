@@ -77,7 +77,6 @@ form.addEventListener("submit", (e) => {
 
 taskList.addEventListener("click", (e) => {
 	const deleteBtn = e.target.closest(".delete-btn");
-	const editBtn = e.target.closest(".edit-btn");
 	const checkBtn = e.target.closest(".check-btn")
 
 	if (deleteBtn) {

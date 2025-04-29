@@ -112,7 +112,7 @@ body {
     width: 85%;
 }
 
-#item-edit-btn , #item-delete-btn {
+#item-check-btn , #item-delete-btn {
     height: 1.5rem;
 }
 
@@ -171,16 +171,19 @@ body {
     display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-	flex-grow: 1;
+
 }
 
 .contacts-list-item-name-input {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
 	outline: none;
 	border-radius: 1rem 1rem 1rem 1rem;
-	padding: 0.5rem;
+	padding: 0.8rem;
     text-align: center;
     box-shadow: 0 0.1rem 0.6rem var(--box-shadow);
+    background-color: var(--input-text);
 }
 
 .contacts-list-item {
@@ -231,6 +234,8 @@ body {
 
 
 
+
+
 .input-valid {
 	outline: 1px solid green;
 }
@@ -246,7 +251,6 @@ body {
 .completed {
 	text-decoration: line-through;
 }
-
 
 
 @media (min-width: 2500px) {
